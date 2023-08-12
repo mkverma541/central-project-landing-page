@@ -110,6 +110,68 @@
             padding: 24px;
             color: #fff;
         }
+        
+        .whatapp_btn {
+            width: 45px;
+            height: 45px;
+            color: #fff;
+            position: fixed;
+            right: 26px;
+            bottom: 80px;
+            cursor: pointer;
+            z-index: 999;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 300ms ease-in-out;
+            box-shadow: 0px 3px 10px rgb(0 0 0 / 16%), 0px 3px 10px rgb(0 0 0 / 16%);
+            text-decoration: none;
+            -webkit-animation: moveBounce 3s linear infinite;
+            animation: moveBounce 3s linear infinite;
+        }
+        
+        @keyframes moveBounce {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        .sticky-side-btn {
+            position: fixed;
+            right: -60px;
+            background-color: #000;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            border-radius: 10px;
+            padding: 10px 17px;
+            padding-top: 24px;
+            color: #dfff;
+            font-size: 14px;
+        }
+        
+        .sticky-side-btn:hover {
+            background-color: #ca8c2a;
+            color: #fff;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .hero-slider .form {
+                display: none;
+            }
+            html body .top-header.header-2 .navbutton {
+                display: none;
+            }
+            .navbar-toggler {
+                display: none;
+            }
+        }
     </style>
 </head>
 
@@ -158,7 +220,7 @@
                                 <div class="col-md-6">
                                     <div class="form">
                                         <div class="wrapper">
-                                            <form>
+                                            <form action="mail.php" method="post">
                                                 <h3>Are You Looking to Buy Central Park Projects in Gurgaon?
                                                 </h3>
                                                 <p>Buy 2, 3, 4 and 5 BHK ultra luxury, premium, high rise, ready to move Central Park Projects in Gurgaon.</p>
@@ -195,7 +257,7 @@
 
 
                 <div class="swiper-slide">
-                    <div class="slide-inner slide-bg-image" data-background="https://www.luxuryresidences.in/seo-assest/images/central-park-bellavista-towers.jpg">
+                    <div class="slide-inner slide-bg-image" data-background="images/hero/slide2.jpg">
                         <div class="container">
                             <div class="row">
                                 <div class="col-md-6">
@@ -204,18 +266,22 @@
 
                                     </div>
                                     <div data-swiper-parallax="400" class="slide-text">
-                                        <p>Living in The Greens
+                                        <p class="tagline">Living in The Greens
                                         </p>
-                                        <p>Ultra Luxurious Specifications
+                                        <p>Supply restriction (“While supplies last!”, “Limited availability”, “Get them before they're gone”)
                                         </p>
-                                        <p>Special Golden week offer</p>
+                                        <ul>
+                                            <li>3.5 Acres Land parcel</li>
+                                            <li>2 Towers</li>
+                                            <li>G+45 floors</li>
+                                        </ul>
                                     </div>
                                     <div class="clearfix"></div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form">
                                         <div class="wrapper">
-                                            <form>
+                                            <form action="mail.php" method="post">
                                                 <h3>Are You Looking to Buy Central Park Projects in Gurgaon?
                                                 </h3>
                                                 <p>Buy 2, 3, 4 and 5 BHK ultra luxury, premium, high rise, ready to move Central Park Projects in Gurgaon.</p>
@@ -324,7 +390,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 text-right">
-                    <img src="https://centralparkprojects.net/assets/images/central-3.jpg" class="img-fluid">
+                    <img src="images/central-3.jpg" class="img-fluid">
                 </div>
             </div>
         </div>
@@ -484,6 +550,48 @@
     </section>
 
 
+    <section class="floor-plan-section pad-tb wow fadeIn" id="floorPlans">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="common-heading">
+                        <h2>Floor Plans</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row img-gallery-magnific mt15">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="floor-plans">
+                        <div class="floor-img">
+                            <a class="image-popup-floor-plan" href="images/floor1.jpg" title="3 BHK">
+                                <img src="images/floor1.jpg" alt="3 BHK" class="img-fluid"> </a>
+                        </div>
+                        <div class="info">
+                            <h3>3 BHK / 3200 Sqft</h3>
+                            <p>10.56 Cr.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <div class="floor-plans">
+                        <div class="floor-img">
+                            <a class="image-popup-floor-plan" href="images/floor2.jpg" title="4 BHK">
+                                <img src="images/floor1.jpg" alt="4 BHK" class="img-fluid"> </a>
+                        </div>
+                        <div class="info">
+                            <h3>4 BHK / 4200 Sqft</h3>
+                            <p>13.86 Cr.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn text-center mt-5" style="display: block;">
+                <a href="images/floor-plans.pdf" target="_blank" class="btn btn-primary">Download Floor Plan</a>
+            </div>
+
+        </div>
+    </section>
 
     <div class="enquire-form pad-tb wow fadeIn" id="contact">
         <div class="container">
@@ -496,7 +604,7 @@
                             Experience 360 degree living where you don't have to step out for anything. Complemented by the renowned Central Park hospitality services and Club Capri, here you live the most coveted lifestyle. Large balconies and sit-outs that offer a spectacular
                             view under the sun and also under the star spangled sky as resorts illuminates in the evening.
                         </p>
-                        <a href="tel:+000000000" class="cta learnmore mt30">Call Now</a>
+                        <a href="tel:+919871700342" class="cta learnmore mt30">Call Now</a>
                     </div>
                 </div>
                 <div class="col-lg-1"></div>
@@ -504,29 +612,24 @@
                     <div class="form-block">
                         <div class="form-header">
                             <h2><span>Get a Callback</span></h2>
-                            <p><i class="fa fa-phone-alt"></i>+91 9102350235</p>
+                            <p><i class="fa fa-phone-alt"></i>+91 9871 700 342</p>
                         </div>
-                        <form id="contactForm" data-toggle="validator" class="shake">
+                        <form action="mail.php" method="post">
                             <div class="row">
                                 <div class="fieldsets col-sm-12">
-                                    <input type="text" id="name" placeholder="Enter name" required data-error="Please fill Out">
-                                    <div class="help-block with-errors"></div>
+                                    <input type="text" id="name" placeholder="Enter name" name="name" required>
                                 </div>
                                 <div class="fieldsets col-sm-12">
-                                    <input type="email" id="email" placeholder="Enter email" required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="email" id="email" placeholder="Enter email" name="email" required>
                                 </div>
                                 <div class="fieldsets col-sm-12">
-                                    <input type="texts" id="email" placeholder="Enter phones" required>
-                                    <div class="help-block with-errors"></div>
+                                    <input type="texts" id="email" placeholder="Enter phones" name="phone" required>
                                 </div>
                             </div>
                             <div class="fieldsets">
-                                <textarea id="message" rows="4" placeholder="Enter your message" required></textarea>
-                                <div class="help-block with-errors"></div>
+                                <textarea id="message" rows="4" placeholder="Enter your message" name="message" required></textarea>
                             </div>
-                            <button type="submit" id="form-submit" class="btn lnk btn-main bg-btn">Submit <span class="circle"></span></button>
-                            <div id="msgSubmit" class="h3 text-center hidden"></div>
+                            <button type="submit" class="btn lnk btn-main bg-btn">Submit <span class="circle"></span></button>
                             <div class="clearfix"></div>
                             <p class="trm"><i class="fas fa-lock"></i>We hate spam, and we respect your privacy.</p>
                         </form>
@@ -558,7 +661,9 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-- text-center pt20">
-                            <p>Powered by Central Projects</p>
+                            <p>Powered by Elegant Homz
+
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -576,27 +681,35 @@
                 </button>
                 <div class="modal-body">
 
-                    <form>
+                    <form method="post" action="mail.php">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                            <input type="text" class="form-control" id="name" placeholder="Name" name="name" required>
                         </div>
                         <div class="form-group">
 
-                            <input type="email" class="form-control" id="email" placeholder="Email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" class="form-control" id="phone" placeholder="Phone" required>
+                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" id="message" rows="4" placeholder="Message" required></textarea>
+                            <textarea class="form-control" id="message" rows="4" name="message" placeholder="Message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <input type="submit" value="Submit" class="btn btn-primary">
                     </form>
                 </div>
 
             </div>
         </div>
     </div>
+
+
+    <a href="https://api.whatsapp.com/send?phone=919871700342&amp;text=Hi" class="whatapp_btn" target="_blank">
+        <img src="images/whatsapp.svg" width="45px">
+    </a>
+
+    <button class="btn sticky-side-btn" data-toggle="modal" data-target="#contactModal">Schedule a Visit</button>
+
 
 
     <script src="js/jquery.min.js"></script>
@@ -621,7 +734,7 @@
         }
 
         // Set up an interval to call the function after 30 seconds
-        //   setTimeout(openEnquiryPopup, 20000); // 30000 milliseconds = 30 seconds
+        setTimeout(openEnquiryPopup, 20000); // 30000 milliseconds = 30 seconds
     </script>
 
 
